@@ -1,4 +1,5 @@
 public class Nrpn {
+    static Nrpn @ lastValue;
     int paramMsb;
     int paramLsb;
     int maxValue;
@@ -63,16 +64,6 @@ public class Nrpn {
     }
 
     function void setLastValue(Nrpn value) {
-        value @=> NrpnDataEntry.lastValue;
-    }
-}
-
-class NrpnDataEntry extends Nrpn {
-    static Nrpn @ lastValue;
-    function NrpnData fromCc(MidiMsg in) {
-        return lastValue.toMidi(channelNumber(in.data1), lastValue.scale(in.data3));
-    }
-    function void setLastValue(Nrpn value) {
-        // noop, since data entry is not an actual parameter
+        value @=> Nrpn.lastValue;
     }
 }

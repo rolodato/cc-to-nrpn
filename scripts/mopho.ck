@@ -4,7 +4,7 @@ if (me.args()) {
     me.arg(0) => Std.atoi => inDevice;
     me.arg(1) => Std.atoi => outDevice;
 } else {
-    <<<"usage: chuck nrpn.ck:InDeviceNumber:OutDeviceNumber">>>;
+    <<<"usage: chuck mopho.ck:InDeviceNumber:OutDeviceNumber">>>;
     <<<"see chuck --probe for device numbers">>>;
     me.exit();
 }
@@ -79,7 +79,7 @@ Nrpn.create(100, 1) @=> mapping[16];
 // sequencer toggle
 Nrpn.create(101, 1) @=> mapping[15];
 // data entry
-// new NrpnDataEntry @=> mapping[19];
+new NrpnDataEntry @=> mapping[19];
 
 // Increment/decrement current parameter
 // All parameters have to be sent via NRPN even if they are supported via CC
