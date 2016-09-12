@@ -2,6 +2,8 @@
 
 ChucK scripts to map incoming MIDI CC messages to device-specific NRPN.
 
+<img src="https://i.imgur.com/OShWqLn.gif" width="800" />
+
 ## Example
 
 [`mopho.ck`](/scripts/mopho.ck) assumes you are using a [Novation Launch Control XL](https://us.novationmusic.com/launch/launch-control-xl) configured with the [corresponding mapping file](/mappings/launchcontrolxl-mopho.syx) in order to control a [Mopho](https://www.davesmithinstruments.com/product/mopho/) (only tested on desktop module version).
