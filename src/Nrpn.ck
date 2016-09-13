@@ -20,6 +20,14 @@ public class Nrpn {
         return 0xB0 | (channel - 1);
     }
 
+    function static Nrpn create(int msb, int lsb, int maximumValue) {
+        Nrpn msg;
+        msb => msg.paramMsb;
+        lsb => msg.paramLsb;
+        maximumValue => msg.maxValue;
+        return msg;
+    }
+
     function static Nrpn create(int param, int maximumValue) {
         Nrpn msg;
         msb(param) => msg.paramMsb;
