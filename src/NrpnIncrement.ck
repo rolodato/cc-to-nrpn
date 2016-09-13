@@ -10,4 +10,8 @@ public class NrpnIncrement extends Nrpn {
         0x0 => out.data3;
         return NrpnData.create([out]);
     }
+
+    function void setLastValue(Nrpn value) {
+        // noop
+    }
 }

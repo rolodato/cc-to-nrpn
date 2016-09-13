@@ -1,5 +1,5 @@
 public class Nrpn {
-    static Nrpn @ lastValue;
+    null => static Nrpn @ lastValue;
     int paramMsb;
     int paramLsb;
     int maxValue;
